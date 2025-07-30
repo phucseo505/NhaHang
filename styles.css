@@ -1,17 +1,20 @@
-body {
-    margin: 0;
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     font-family: Arial, sans-serif;
+    background-color: #fff;
 }
 
-.header {
+.header,
+.footer {
     background-color: #f4a261;
-    text-align: center;
-    padding: 20px;
     color: white;
+    text-align: center;
 }
 
 .menu-section {
-    background-color: #fff;
+    flex: 1;
     padding: 20px;
 }
 
@@ -20,54 +23,23 @@ body {
     font-size: 24px;
     color: #264653;
     border-bottom: 2px solid #ccc;
-    margin-top: 30px;
+    margin-top: 20px;
     padding-bottom: 5px;
 }
 
 .menu-row {
-    overflow: hidden;
+    display: flex;
+    gap: 20px;
     margin-top: 15px;
     margin-bottom: 30px;
 }
 
 .menu-item {
-    width: 30%;
-    float: left;
-    margin-right: 3.33%;
+    flex: 1;
     border: 1px solid #ddd;
     padding: 10px;
-    box-sizing: border-box;
     background-color: #fafafa;
-}
-
-.menu-item:last-child {
-    margin-right: 0;
-}
-
-.menu-item h3 {
-    margin: 0 0 5px;
-    font-weight: bold;
-    color: #2a9d8f;
-}
-
-.menu-item p {
-    margin: 5px 0;
-}
-
-.price {
-    color: #e76f51;
-    font-weight: bold;
-}
-
-.special {
-    border: 1px solid red;
-    background-color: #ffeaea;
-}
-
-.menu-item img {
-    width: 100%;
-    height: 300px;
-    margin-bottom: 10px;
+    box-sizing: border-box;
     border-radius: 6px;
 }
 
@@ -76,9 +48,36 @@ body {
     border: 1px solid #f4a261;
 }
 
-.footer {
-    background-color: #264653;
-    color: white;
+.menu-item img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 6px;
+}
+
+.menu-item h3 {
+    margin: 0 0 5px;
+    font-weight: bold;
+    color: #151817;
     text-align: center;
-    padding: 15px;
+}
+
+.menu-item p {
+    margin: 5px 0;
+    text-align: center;
+}
+
+.price {
+    color: #e76f51;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.special {
+    border: 1px solid red;
+    background-color: #ffeaea;
+}
+
+.footer p {
+    margin: 5px 0;
 }
